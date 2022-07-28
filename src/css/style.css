@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+
+:root {
+  --base-poke: #c8a8e8;
+  --base-border: #aa78dd;
+  --border-color: #606878;
+  --gray-base: #e8e8e8;
+  --text: #f8f8f8;
+  --base-stats: #f8e878;
+  --stats: #f8f8d8;
+  --text-black: #404040;
+  --base-text: #788090;
+  --bg-color: #e2d99f;
+
+  --rock: #b8a038;
+  --ground: #d8e030;
+  --normal: #a8a878;
+  --fight: #e83000;
+  --fly-1: #98d8d8;
+  --fire: #f08030;
+  --water: #6890f0;
+  --grass: #78c850;
+  --eletric: #f8b010;
+  --steel-2: #507888;
+  --poison: #f85888;
+  --poison-2: #a040a0;
+  --dark: #507888;
+  --fairy: #fdb9e9;
+
+  font-family: 'Poppins', sans-serif;
+  font-size: 62.5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+body {
+  background-color: var(--bg-color);
+}
+
+/* Poke Selection */
+
+.pokedex {
+  margin-top: 2rem;
+  width: 36rem;
+  margin-inline: auto;
+  padding: 2rem 1rem;
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: 60rem;
+}
+
+.pokedex li {
+  display: flex;
+  align-items: center;
+  gap: .3rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  transition: all .04s;
+  text-transform: uppercase;
+}
+
+.pokedex li:hover {
+  transform: scaleX(1.05)
+}
+
+
+.pokedex .id, .pokedex .namelist{
+  font-size: 1.8rem;
+  color: var(--text-black);
+}
+
+
+h1, h2 {
+  color: var(--text);
+  text-shadow: .4rem .3rem .2rem var(--border-color);
+}
+
+.container {
+  border: .3rem solid var(--border-color);
+  width: 80rem;
+  margin-inline: auto;
+  border-radius: 2rem;
+  margin-top: 6rem;
+  display: none;
+}
+
+.poke-info, .poke-stats {
+  width: 40rem;
+  background-color: var(--base-poke);
+  padding: 2rem;
+}
+
+.poke-info {
+  border-right: .3rem solid var(--border-color);
+  border-bottom-left-radius: 1.6rem;
+  border-top-left-radius: 1.6rem;
+  grid-area: A;
+}
+
+#voltar{
+  cursor: pointer;
+  transition: all .3s;
+}
+
+#voltar:hover {
+  transform: scale(1.4)
+}
+
+.name {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.name h2 {
+  font-size: 2rem;
+}
+
+.name h1 {
+  font-size: 2.4rem;
+  text-transform: uppercase;
+}
+
+.poke-imagem {
+  width: 100%;
+  background-color: var(--gray-base);
+  border: .2rem solid var(--base-border);
+  border-radius: 2rem;
+}
+
+.poke-imagem img {
+  width: 100%;
+}
+
+.poke-stats {
+  background-color: var(--base-stats);
+  border-bottom-right-radius: 1.6rem;
+  border-top-right-radius: 1.6rem;
+  grid-area: B;
+}
+
+.poke-stats li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.poke-stats h3 {
+  color: var(--text);
+  text-shadow: .4rem .3rem .2rem var(--border-color);
+  font-size: 2.4rem;
+  position: relative;
+  z-index: 2;
+}
+
+.poke-stats h3::before {
+  content:'';
+  background-color: var(--base-text);
+  height: 1rem;
+  width: 120%;
+  position: absolute;
+  border-radius: 1rem;
+  top: 43%;
+  left: -10%;
+  z-index: -1;
+}
+
+.poke-stats li span {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--text-black);
+  background-color: var(--stats);
+  padding: .6rem 4rem;
+  border-radius: 2rem;
+}
+
+/* ###### types  ######## */
+
+.types {
+  margin-top: 6rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.type{
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--text);
+  padding: .2rem 1rem;
+  border-radius: 1rem;
+  text-shadow: .4rem .3rem .2rem var(--border-color);
+  text-transform: uppercase;
+}
+
+.type.ground {background: linear-gradient(180deg, var(--ground) 50%, var(--rock) 50%);}
+.type.flying {background: linear-gradient(180deg, var(--fly-1) 50%, var(--normal) 50%);}
+.type.water {background: var(--water);}
+.type.grass {background: var(--grass);}
+.type.electric {background: var(--eletric);}
+.type.fire {background: var(--fire);}
+.type.bug {background: var(--ground);}
+.type.fairy {background: var(--fairy);}
+.type.psychic {background: var(--poison);}
+.type.fighting {background: var(--fight);}
+.type.ice {background: var(--fly-1);}
+.type.ghost {background: var(--poison-2);}
+.type.rock {background: var(--rock);}
+.type.normal {background: var(--normal);}
+.type.dragon {background: linear-gradient(180deg, var(--water) 50%, var(--fight) 50%);}
+.type.steel {background: linear-gradient(180deg, var(--normal) 50%, var(--steel-2) 50%);}
+.type.poison {background: linear-gradient(180deg, var(--poison) 50%, var(--poison-2) 50%);}
+.type.undefined{display: none;}

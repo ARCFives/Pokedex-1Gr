@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pokedex</title>
+  <link rel="stylesheet" href="src/css/style.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="src/img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="src/img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="src/img/favicon-16x16.png">
+  <link rel="manifest" href="src/img/site.webmanifest">
+</head>
+<body>
+  <div class="container">
+    <div class="poke-info">
+      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" viewBox="0 0 22 22" id="voltar">
+        <path stroke="#e83000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 1 1 21M1 1l20 20"/>
+      </svg>      
+      <div class="name">
+        <h2 id="pokeId"></h2>
+        <h1 id="pokeName"></h1>
+      </div>
+      <div class="poke-imagem">
+        <img src="" id="pokeImg">
+      </div>
+    </div>
+    <div class="poke-stats">
+      <div class="stats">
+        <ul>
+          <li>
+            <h3>HP:</h3>
+            <Span class="stat"></Span>
+          </li>
+          <li>
+            <h3>Ataque:</h3>
+            <Span class="stat"></Span>
+          </li>
+          <li>
+            <h3>Defesa:</h3>
+            <Span class="stat"></Span>
+          </li>
+          <li>
+            <h3>S.Ata:</h3>
+            <Span class="stat"></Span>
+          </li>
+          <li>
+            <h3>S.Def:</h3>
+            <Span class="stat"></Span>
+          </li>
+          <li>
+            <h3>Velocidade:</h3>
+            <Span class="stat"></Span>
+          </li>
+        </ul>
+        <div class="types">
+          <span class="type tipo" id="typeOne"></span>
+          <span class="type tipo" id="typeTwo"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="pokedex" id="pokedex">
+    <ul id="pokeTabela">
+      <!-- <li class="select">
+        <span class="id">01</span>
+        <img src="src/img/Poke.png" class="pokeball">
+        <h3 class="namelist">name</h3>
+        <span class="type grass">type</span>
+        <span class="type poison">type</span>        
+      </li> -->
+    </ul>
+  </div>
+  <script src="src/scripts/main.js"></script>
+</body>
+</html>
